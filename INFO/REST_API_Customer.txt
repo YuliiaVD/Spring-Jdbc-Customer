@@ -1,0 +1,116 @@
+REST API Customer
+---------------------
+
+(1) Отримання даних
+
+GET
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers
+
+Даних, поки, немає.
+
+
+(2) Створення даних
+
+POST
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers
+
+Виконуємо окремі запити
+
+
+{
+    "firstName": "John",
+    "lastName": "Green",
+    "address": "813 Howard Street, Oswego, NY 13126, USA",
+    "phone": "38099-000-01-02"
+}
+
+{
+    "firstName": "Bob",
+    "lastName": "Bright",
+    "address": "73 Apple Road, Bournemouth, BH8 6BL, UK",
+    "phone": "38099-000-01-03"
+}
+
+{
+    "firstName": "Alice",
+    "lastName": "Terra",
+    "address": "Schlosshoferstrasse 20,1210 Vienna",
+    "phone": "38099-000-01-04"
+}
+
+{
+    "firstName": "Tom",
+    "lastName": "Bright",
+    "address": "100 Flushcombe Road,Albury 2148",
+    "phone": "38099-000-01-05"
+}
+
+{
+    "firstName": "Lucy",
+    "lastName": "Moon",
+    "address": "AUGUSTINOVA 2068,148 00,PRAGUE",
+    "phone": "38099-000-01-06"
+}
+
+{
+    "firstName": "David",
+    "lastName": "Terra",
+    "address": "Hostatostrasse 16,65929,Frankfurt",
+    "phone": "38099-000-01-07"
+}
+
+{
+    "firstName": "Mary",
+    "lastName": "Waters",
+    "address": "Vabaduse Väljak 7,15199 TALLINN",
+    "phone": "38099-000-01-08"
+}
+
+{
+    "firstName": "Alice",
+    "lastName": "Bright",
+    "address": "6 RUE CHRISTIANI,75018,PARIS",
+    "phone": "38099-000-01-09"
+}
+
+(3) Отримання всіх даних
+
+GET
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers
+
+(4) Отримання даних за id
+
+GET
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers/2
+
+(5) Також, за неіснуючим id
+
+GET
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers/17
+
+(6) Отримання останього запису в таблиці
+
+GET
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers/last-entity
+
+
+(7) Отримання даних за Query Params тут
+src/main/java/org/example/app/controller/CustomerController.java
+
+
+(8) Оновлення даних за id
+
+PUT
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers/3
+
+{
+    "firstName": "Alice",
+    "lastName": "Sunny",
+    "address": "6 RUE CHRISTIANI,75018,PARIS",
+    "phone": "43000-999-99-99"
+}
+
+(9) Видалення даних за id
+
+DELETE
+http://localhost:8080/Spring-Jdbc-Customer-1.0-SNAPSHOT/api/v1/customers/4

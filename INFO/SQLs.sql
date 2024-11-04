@@ -1,0 +1,11 @@
+CREATE DATABASE demo_db;
+
+--Create table customers
+
+CREATE TABLE IF NOT EXISTS customers
+( id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  phone VARCHAR(32) NOT NULL
+);
